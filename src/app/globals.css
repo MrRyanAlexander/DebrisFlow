@@ -2,79 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --background: 220 29% 96%; /* Light Gray */
+    --foreground: 220 10% 25%; /* Dark Gray */
+
+    --card: 220 29% 96%; /* Match background */
+    --card-foreground: 220 10% 25%; /* Match foreground */
+
+    --popover: 220 29% 96%; /* Match background */
+    --popover-foreground: 220 10% 25%; /* Match foreground */
+
+    --primary: 207 82% 67%; /* Soft Blue */
+    --primary-foreground: 220 10% 15%; /* Darker gray for text on soft blue */
+
+    --secondary: 220 15% 90%; /* Lighter gray */
+    --secondary-foreground: 220 10% 25%; /* Dark Gray */
+
+    --muted: 220 15% 85%; /* Muted gray */
+    --muted-foreground: 220 10% 45%; /* Darker Muted Gray */
+
+    --accent: 260 46% 63%; /* Muted Purple */
+    --accent-foreground: 0 0% 100%; /* White text on Muted Purple */
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+
+    --border: 220 15% 88%; /* Slightly darker than background for borders */
+    --input: 220 15% 88%; /* Match border */
+    --ring: 207 82% 67%; /* Primary color for rings */
+
     --radius: 0.5rem;
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Chart colors */
+    --chart-1: 207 82% 67%; /* primary */
+    --chart-2: 260 46% 63%; /* accent */
+    --chart-3: 30 80% 60%; /* orange */
+    --chart-4: 120 40% 55%; /* green */
+    --chart-5: 330 70% 65%; /* pink */
+
+    /* Sidebar specific vars for light theme */
+    --sidebar-background: 220 15% 18%; /* Darker grey/blue */
+    --sidebar-foreground: 220 15% 85%; /* Light text */
+    --sidebar-primary: 207 82% 67%; /* App's primary blue */
+    --sidebar-primary-foreground: 220 10% 15%; /* Dark text on primary */
+    --sidebar-accent: 220 15% 28%; /* Slightly lighter than sidebar-background for hover */
+    --sidebar-accent-foreground: 220 15% 95%; /* Very light text for hover */
+    --sidebar-border: 220 15% 25%;
+    --sidebar-ring: 207 82% 67%; /* App's primary blue */
   }
+
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --background: 220 10% 12%; /* Dark Slate Blue */
+    --foreground: 220 15% 85%; /* Light Grayish Blue */
+
+    --card: 220 10% 12%;
+    --card-foreground: 220 15% 85%;
+
+    --popover: 220 10% 12%;
+    --popover-foreground: 220 15% 85%;
+
+    --primary: 207 70% 60%; /* Adjusted Soft Blue for dark */
+    --primary-foreground: 207 80% 95%;
+
+    --secondary: 220 10% 20%; /* Darker Slate Blue */
+    --secondary-foreground: 220 15% 85%;
+
+    --muted: 220 10% 25%; /* Darker Muted Slate Blue */
+    --muted-foreground: 220 15% 65%; /* Lighter Muted Grayish Blue */
+
+    --accent: 260 50% 65%; /* Adjusted Muted Purple for dark */
+    --accent-foreground: 260 80% 95%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
-    --sidebar-background: 240 5.9% 10%;
+
+    --border: 220 10% 28%;
+    --input: 220 10% 28%;
+    --ring: 207 70% 60%; /* primary for dark */
+
+    /* Chart colors */
+    --chart-1: 207 70% 60%; /* primary dark */
+    --chart-2: 260 50% 65%; /* accent dark */
+    --chart-3: 30 70% 50%;
+    --chart-4: 120 35% 50%;
+    --chart-5: 330 60% 60%;
+
+    /* Sidebar specific vars for dark theme (defaults from shadcn are good) */
+    --sidebar-background: 240 5.9% 10%; /* Default dark sidebar */
     --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-primary: 207 70% 60%; /* App's primary blue for dark */
+    --sidebar-primary-foreground: 207 80% 95%;
     --sidebar-accent: 240 3.7% 15.9%;
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-ring: 207 70% 60%; /* App's primary blue for dark */
   }
 }
 
@@ -84,5 +106,6 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
