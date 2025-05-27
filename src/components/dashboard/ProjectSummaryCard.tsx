@@ -3,7 +3,8 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 import { Badge } from '@/components/ui/badge';
-import { ClientIcon, RegionSummaryIcon, ErrorIcon, TransactionIcon, Clock } from '@/lib/constants';
+import { ClientIcon, RegionSummaryIcon, ErrorIcon, TransactionIcon } from '@/lib/constants';
+import { Clock } from 'lucide-react';
 import { PROJECT_STATUS_COLORS } from '@/lib/constants';
 import { format } from 'date-fns';
 import { DATE_FORMAT } from '@/lib/constants';
