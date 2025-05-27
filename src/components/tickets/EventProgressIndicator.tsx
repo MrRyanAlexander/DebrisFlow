@@ -1,4 +1,5 @@
 'use client';
+import React from 'react'; // Added React import
 import type { TicketEvent, TicketEventType } from '@/types';
 import { TICKET_EVENT_TYPES_ORDER, TICKET_EVENTS_CONFIG, EVENT_STATUS_COLORS } from '@/lib/constants';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
